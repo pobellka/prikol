@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета посетителя ресторана</title>
+    <style>
+      div
+      {
+       background: #ffedff;
+       color: #380814;
+       padding: 15px;
+       border-radius: 7px;
+       border-color: #380814;
+       border-style: solid;
+      }
+
+      td
+      {
+       height: 50px;
+       width: 200px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Анкета посетителя ресторана</h1>
+    <div>
+        <b>КОНТАКТНАЯ ИНФОРМАЦИЯ</b>
+         <table cellspacing="0" cellpadding="4">
+           <tr>
+             <td>Имя</td>
+             <td><input type="text" placeholder="Иван"/></td>
+           </tr>
+           <tr>
+             <td>Телефон</td>
+             <td><input type="text" placeholder="89000000000"/></td>
+           </tr>
+           <tr>
+             <td>Дата посещения</td>
+             <td><input type="date"/></td>
+           </tr>
+         </table>
+    </div>
+<br>
+    <div>
+        <b>ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</b>
+         <table cellspacing="0" cellpadding="4">
+           <tr>
+             <td>Возраст</td>
+             <td><input type="text" placeholder="25"/></td>
+           </tr>
+           <tr>
+             <td>Любимая кухня</td>
+             <td><p><select>
+               <option disabled>Выберите кухню</option>
+               <option value="Русская">Русская</option>
+               <option value="Азиатская">Азиатская</option>
+               <option value="Грузинская">Грузинская</option>
+               <option value="Индийская">Индийская</option>
+               <option value="Европейская">Европейская</option>
+             </select></p></td>
+           </tr>
+           <tr>
+             <td>Какие блюда Вы хотели бы видеть в меню?</td>
+             <td><textarea cols="50" name="comment" placeholder="Поке с лососем, хачапури по-аджарски, салат с креветками..."></textarea></td>
+           </tr>
+         </table>
+    </div>
+<br>
+    <div>
+        <b>ОЦЕНКА НАШЕГО ЗАВЕДЕНИЯ</b>
+      <br>
+      <br>
+        <p>Почему вы выбрали наше заведение?</p>
+         <p><input type="radio">Недалеко от дома/работы</p>
+         <p><input type="radio">Увидел рекламу</p>
+         <p><input type="radio">Посоветовали</p>
+         <p><input type="radio">Голодный был и как раз проходил мимо</p>
+      <br>
+        <p>Вы будете рекомендовать наше заведение друзьям?</p>
+         <p><input type="radio">Нет</p>
+         <p><input type="radio">Да</p>
+         <p><input type="radio">У меня нет друзей</p>
+    </div>
+<br>
+    <div>
+        <b>КАКУЮ СУММУ ВЫ ПОТРАТИЛИ</b>
+         <p><input type="radio">Больше 1000 рублей</p>
+         <p><input type="radio">Меньше 1000 рублей</p>
+         <p><input type="radio">Я сбежал, не заплатив</p>
+    </div>
+<br>
+    <input type="submit" name="Отправить"/>
+</body>
+</html>
