@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+ <head>
+     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <title>угадайка</title>
+ </head>
+
+ <body bgcolor="#87CEFA" text="#081f59">
+  <h1> игра <b>"Угадайка"</b></h1>
+<hr color="081f59" size="7px">
+  <script language="JavaScript">
+        function IsNum(num, a, b)
+     {
+      var ret = true;
+      if (num == "") ret = false;
+      else
+        for (var i = 0; i<num.length; i++)
+         if (num.charAt(i) < "0" || num.charAt(i) > "9") {ret = false; break;}
+      if (ret) ret = a<=parseInt(num, 10) && parseInt(num, 10)<=b;
+      return ret;
+     }
+
+     function FindNum()
+     {
+      var a = 1;
+      var b = 100;
+      var number = Math.floor(a + (b - a + 1)*Math.random());
+      var answer = 0;
+      var step = 0;
+      alert ("Задумано число от "+a+" до "+b+". Попробуйте его отгадать!");
+
+      while (answer != number)
+      {
+       answer = prompt("Число в [" + a + ", " + b + "] Ваш ход:", "");
+       if (answer == null) break;
+
+       if (IsNum(answer, a, b))
+       {
+        answer = parseInt(answer, 10);
+        if (answer < number)
+         {alert ("Ваше число меньше задуманного!"); a = answer;}
+        else if (answer > number)
+         {alert ("Ваше число больше задуманного!"); b = answer;}
+        step++;
+       }
+
+       else
+       {
+        alert ("Ошибка при вводе числа");
+        answer = 0;
+       }
+      }
+
+    if (answer != null)
+     alert ("Вы угадали число "+number+" за "+step+" шагов!");
+    }
+
+     FindNum()
+  </script>
+ <p> игра закончена </p>
+ </body>
+</html>
